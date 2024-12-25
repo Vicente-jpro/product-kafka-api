@@ -16,6 +16,9 @@ spring:
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+     # acks: all # waits for an acknowlegment from all brokes
+     # acks: 1   # waits for acknowledgment from all leader broker only
+     # acks: 0   # Does not wait for an acknowledgment.      
 
 message:
   config:
